@@ -37,7 +37,7 @@ git checkout master
 
 mkdir -p ../../build/qemu/
 cd ../../build/qemu
-../../src/avatar-qemu/configure --disable-sdl --target-list=arm-softmmu,aarch64-softmmu
+../../src/avatar-qemu/configure --disable-sdl --target-list=arm-softmmu,aarch64-softmmu,m68k-softmmu
 
 make -j $QEMU_NPROC
 
