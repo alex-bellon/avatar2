@@ -37,4 +37,9 @@ class M68K(Architecture):
     pc_name = 'pc'
     sr_name = 'sr'
 
-# TODO: define CS_ARCH and CS_MODE, and maybe KS stuff in avatar-qemu/include/disas/capstone.h
+# May need to define CS_ARCH and CS_MODE, and maybe KS stuff in avatar-qemu/include/disas/capstone.h
+
+class M68040(M68K):
+
+    qemu_name = 'm68040'
+    gdb_name = 'm68040'
