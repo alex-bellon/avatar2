@@ -3,7 +3,6 @@ from capstone import *
 from .architecture import Architecture
 
 from avatar2.installer.config import QEMU, GDB_MULTI
-# TODO: should I be using GDB_MULTI or add a GDB_M68K set to normal gdb
 
 class M68K(Architecture):
     
