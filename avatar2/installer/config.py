@@ -25,7 +25,7 @@ TARGETS = OrderedDict(
                'apt_name': 'openocd'
              }),
     (QEMU, {  'git': 'https://github.com/avatartwo/avatar-qemu',
-             'configure': '--disable-sdl --target-list=arm-softmmu',
+             'configure': '--disable-sdl --target-list=m68k-softmmu,arm-softmmu',
              'make': '',
              'git_apt_deps': 'libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev',
              'rel_path': 'arm-softmmu/qemu-system-arm',

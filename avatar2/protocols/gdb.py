@@ -15,6 +15,7 @@ else:
     import queue
 
 from avatar2.archs.arm import ARM
+from avatar2.archs.m68k import M68K
 from avatar2.targets import TargetStates
 from avatar2.message import AvatarMessage, UpdateStateMessage, BreakpointHitMessage, SyscallCatchedMessage, WatchpointHitMessage
 
@@ -251,7 +252,8 @@ class GDBProtocol(object):
     def __init__(
             self,
             gdb_executable="gdb",
-            arch=ARM,
+            #arch=ARM,
+            arch=M68K,
             additional_args=[],
             async_message_handler=None,
             avatar=None,
