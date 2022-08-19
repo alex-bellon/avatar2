@@ -96,6 +96,7 @@ class QemuTarget(Target):
             qmp = ["-qmp", "unix:%s,server,nowait" % self.qmp_unix_socket]
         else:
             qmp = ["-qmp", "tcp:127.0.0.1:%d,server,nowait" % self.qmp_port]
+        
 
         cmd_line = (
             executable_name
@@ -242,7 +243,6 @@ class QemuTarget(Target):
         """
         Spawns a Qemu process and connects to it
         """
-
         if self.cpu_model is None:
             if hasattr(self._arch, "cpu_model"):
                 self.cpu_model = self.avatar.arch.cpu_model
@@ -263,6 +263,7 @@ class QemuTarget(Target):
         ) as err:
             self._process = Popen(cmd_line, stdout=out, stderr=err)
         self.log.debug("QEMU command line: %s" % " ".join(cmd_line))
+        print("QEMU command line: %s" % " ".join(cmd_line))
         self.log.info("QEMU process running")
         self._connect_protocols()
 
