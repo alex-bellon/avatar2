@@ -390,6 +390,7 @@ class GDBProtocol(object):
         req = ['-target-select', 'remote', '%s:%d' % (ip, int(port))]
         ret, resp = self._sync_request(req, GDB_PROT_CONN)
 
+        print(resp)
         self.log.debug(
             "Attempted to connect to target. Received response: %s" %
             resp)

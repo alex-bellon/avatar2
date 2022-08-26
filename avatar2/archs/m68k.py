@@ -25,16 +25,15 @@ class M68K(Architecture):
                  'a2': 10,
                  'a3': 11,
                  'a4': 12,
-                 'a5': 13,
-                 'a6': 14,
-                 'a7': 15,
+                 'a5': 13, # maybe put back in a6 and a7
+                 'fp': 14,
                  'sp': 15,
-                 'pc': 16,
-                 'sr': 17,
+                 'ps': 16,
+                 'pc': 17
                  }
 
     pc_name = 'pc'
-    sr_name = 'sr'
+    sr_name = 'ps' # maybe sr
 
     capstone_arch = CS_ARCH_M68K
 
