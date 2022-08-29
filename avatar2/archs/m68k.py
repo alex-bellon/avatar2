@@ -41,7 +41,7 @@ class M68K(Architecture):
 
 class M68040(M68K):
 
-    qemu_name = 'm68k:68040'
+    qemu_name = 'm68040'
     gdb_name = 'm68k:68040'
 
     capstone_mode = CS_MODE_M68K_040
