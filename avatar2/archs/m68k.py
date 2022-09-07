@@ -12,6 +12,8 @@ class M68K(Architecture):
     qemu_name = 'm68k'
     gdb_name = 'm68k'
 
+    endian = 'big'
+
     registers = {'d0': 0,
                  'd1': 1,
                  'd2': 2,
