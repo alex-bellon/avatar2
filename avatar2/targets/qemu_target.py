@@ -263,7 +263,6 @@ class QemuTarget(Target):
         ) as err:
             self._process = Popen(cmd_line, stdout=out, stderr=err)
         self.log.debug("QEMU command line: %s" % " ".join(cmd_line))
-        print("QEMU command line: %s" % " ".join(cmd_line))
         self.log.info("QEMU process running")
         self._connect_protocols()
 
